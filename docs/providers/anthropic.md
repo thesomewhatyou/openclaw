@@ -179,7 +179,7 @@ that model.
 
 However, if you want to use the 1M context window, you must allow long-context usage on that credential
 (usually API key billing, or a subscription account with Extra Usage
-enabled). Otherwise HTTP 429 from Anthropic returns:
+enabled). Otherwise, Anthropic returns:
 `HTTP 429: rate_limit_error: Extra usage is required for long context requests`.
 
 Note: Anthropic currently rejects `context-1m-*` beta requests when using
