@@ -57,7 +57,7 @@ Oracle’s free tier can be a great fit for OpenClaw (especially if you already 
 
 ```bash
 # Connect via public IP
-ssh ubuntu@YOUR_PUBLIC_IP # or opc@YOUR_PUBLIC_IP if you accidentally selected Oracle Linux
+ssh ubuntu@YOUR_PUBLIC_IP # or opc@YOUR_PUBLIC_IP if you chose Oracle Linux
 
 # Update system
 sudo apt update && sudo apt upgrade -y # or dnf upgrade -y
