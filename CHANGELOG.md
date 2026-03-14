@@ -56,6 +56,7 @@ Docs: https://docs.openclaw.ai
 - Telegram/media errors: redact Telegram file URLs before building media fetch errors so failed inbound downloads do not leak bot tokens into logs. Thanks @space08.
 - Dashboard/chat UI: render oversized plain-text replies as normal paragraphs instead of capped gray code blocks, so long desktop chat responses stay readable without tab-switching refreshes.
 - Gateway/Control UI: restore the operator-only device-auth bypass and classify browser connect failures so origin and device-identity problems no longer show up as auth errors in the Control UI and web chat. (#45512) thanks @sallyom.
+- macOS/voice wake: stop crashing wake-word command extraction when speech segment ranges come from a different transcript instance.
 
 ## 2026.3.12
 
@@ -3289,7 +3290,7 @@ Docs: https://docs.openclaw.ai
 - Agents: add CLI log hint to "agent failed before reply" messages. (#1550) Thanks @sweepies.
 - Agents: warn and ignore tool allowlists that only reference unknown or unloaded plugin tools. (#1566)
 - Agents: treat plugin-only tool allowlists as opt-ins; keep core tools enabled. (#1467)
-- Agents: honor enqueue overrides for embedded runs to avoid queue deadlocks in tests. (commit 084002998)
+- Agents: honor enqueue overrides for embedded runs to avoid queue deadlocks in tests. (#45459) Thanks @LyttonFeng and @vincentkoc.
 - Slack: honor open groupPolicy for unlisted channels in message + slash gating. (#1563) Thanks @itsjaydesu.
 - Discord: limit autoThread mention bypass to bot-owned threads; keep ack reactions mention-gated. (#1511) Thanks @pvoo.
 - Discord: retry rate-limited allowlist resolution + command deploy to avoid gateway crashes. (commit f70ac0c7c)
