@@ -51,13 +51,13 @@ Oracle’s free tier can be a great fit for OpenClaw (especially if you already 
 4. Click **Create**
 5. Note the public IP address
 
-**Tip:** If instance creation fails with "Out of capacity", try a different availability domain or retry later. Free tier capacity is limited. If desperate, you can move to Pay-to-GO and request an ARM instance. You cannot switch to the free tier after moving to Pay-to-Go, but as long as you stay within free tier limits, you won't be charged.
+ **Tip:** If instance creation fails with "Out of capacity", try a different availability domain or retry later. Free tier capacity is limited. If desperate, you can move to Pay-to-Go and request an ARM instance. You cannot switch to the free tier after moving to Pay-to-Go, but as long as you stay within free tier limits, you won't be charged.
 
 ## 2) Connect and Update
 
 ```bash
 # Connect via public IP
-ssh ubuntu@YOUR_PUBLIC_IP # or opc@YOUR_PUBLIC_IP if you selected Oracle Linux
+ssh ubuntu@YOUR_PUBLIC_IP # or opc@YOUR_PUBLIC_IP if you accidentally selected Oracle Linux
 
 # Update system
 sudo apt update && sudo apt upgrade -y # or dnf upgrade
@@ -76,7 +76,7 @@ sudo hostnamectl set-hostname openclaw
 sudo passwd ubuntu # or opc
 
 # Enable lingering (keeps user services running after logout)
-sudo loginctl enable-linger ubuntu
+sudo loginctl enable-linger ubuntu # or opc
 ```
 
 ## 4) Install Tailscale
@@ -219,7 +219,7 @@ If Tailscale Serve isn't working, use an SSH tunnel:
 
 ```bash
 # From your local machine (via Tailscale)
-ssh -L 18789:127.0.0.1:18789 ubuntu@openclaw
+ssh -L 18789:127.0.0.1:18789 ubuntu@openclaw # or again, opc
 ```
 
 Then open `http://localhost:18789`.
@@ -236,10 +236,6 @@ Free tier ARM instances are extremely popular. Try:
 - Retry during off-peak hours (early morning, late evening)
 - Use the "Always Free" filter when selecting shape
 - Move to Pay-to-Go and request an ARM instance (see below for details)
-
-<Danger>
-You can switch to Pay-to-Go for higher priority when requesting an ARM instance, but you can't return to the free tier after unless you pursue account deletion. As long as you stay within free limits, you won't be charged. If you aren't that desperate, [Oracle isn't for you.](/platforms/digitalocean)
-</Danger>
 
 ### Tailscale won't connect
 
