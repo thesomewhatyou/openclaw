@@ -60,7 +60,7 @@ Oracle’s free tier can be a great fit for OpenClaw (especially if you already 
 ssh ubuntu@YOUR_PUBLIC_IP # or opc@YOUR_PUBLIC_IP if you accidentally selected Oracle Linux
 
 # Update system
-sudo apt update && sudo apt upgrade -y # or dnf upgrade
+sudo apt update && sudo apt upgrade -y # or dnf upgrade -y
 sudo apt install -y build-essential # or: sudo dnf groupinstall -y "Development Tools"
 ```
 
