@@ -61,7 +61,7 @@ ssh ubuntu@YOUR_PUBLIC_IP # or opc@YOUR_PUBLIC_IP if you accidentally selected O
 
 # Update system
 sudo apt update && sudo apt upgrade -y # or dnf upgrade
-sudo apt install -y build-essential # or dnf install
+sudo apt install -y build-essential # or: sudo dnf groupinstall -y "Development Tools"
 ```
 
 **Note:** `build-essential` is required for ARM compilation of some dependencies.
