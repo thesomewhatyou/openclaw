@@ -192,7 +192,7 @@ context1m beta header for OAuth auth and keeps the required OAuth betas.
 
 ### Where to get a setup-token
 
-Setup-tokens are generated only via the **Claude Code CLI**, and you cannot generate them from the Anthropic Console. [Install the Claude Code CLI if needed](https://code.claude.com/docs/en/overview#:~:text=To%20install%20Claude%20Code%2C%20use%20one%20of%20the%20following%20methods), log in, and then run:
+Setup-tokens are generated only via the **Claude Code CLI**, and you cannot generate them from the Anthropic Console. [Install the Claude Code CLI if needed](https://code.claude.com/docs/en/overview#:~:text=To%20install%20Claude%20Code%2C%20use%20one%20of%20the%20following%20methods) on **any machine** (not necessarily the gateway), log in, and then run:
 
 ```bash
 claude setup-token
