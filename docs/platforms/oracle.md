@@ -51,7 +51,7 @@ Oracle’s free tier can be a great fit for OpenClaw (especially if you already 
 4. Click **Create**
 5. Note the public IP address
 
- **Tip:** If instance creation fails with "Out of capacity", try a different availability domain or retry later. Free tier capacity is limited. If desperate, you can move to Pay-to-Go and request an ARM instance. You cannot switch to the free tier after moving to Pay-to-Go, but as long as you stay within free tier limits, you won't be charged.
+**Tip:** If instance creation fails with "Out of capacity", try a different availability domain or retry later. Free tier capacity is limited. If desperate, you can move to Pay-to-Go and request an ARM instance. You cannot switch to the free tier after moving to Pay-to-Go, but as long as you stay within free tier limits, you won't be charged.
 
 ## 2) Connect and Update
 
