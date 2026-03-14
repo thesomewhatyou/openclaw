@@ -235,7 +235,7 @@ Free tier ARM instances are extremely popular. Try:
 - Different availability domain/fallback domain
 - Retry during off-peak hours (early morning, late evening)
 - Use the "Always Free" filter when selecting shape
-- Move to Pay-to-Go and request an ARM instance (see below for details)
+- Move to Pay-to-Go and request an ARM instance
 
 ### Tailscale won't connect
 
