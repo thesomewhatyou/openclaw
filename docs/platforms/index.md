@@ -48,7 +48,7 @@ Use one of these (all supported):
 - Configure flow: `openclaw configure` → select **Gateway service**
 - Repair/migrate: `openclaw doctor` (offers to install or fix the service)
 
-Depending on your OS, the gateway profile may be different. Example:
+Depending on your OS, the gateway runs under different service managers and service names/targets (which may include your selected profile). Example:
 
 - macOS: LaunchAgent (`ai.openclaw.gateway` or `ai.openclaw.<profile>`; legacy `com.openclaw.*`)
 - Linux/WSL2: systemd user service (`openclaw-gateway[-<profile>].service`)
