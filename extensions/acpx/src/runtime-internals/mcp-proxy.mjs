@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { spawn } from "node:child_process";
+import { createHmac } from "node:crypto";
 import path from "node:path";
 import { createInterface } from "node:readline";
 import { pathToFileURL } from "node:url";
@@ -20,8 +21,7 @@ function verifyPayloadSignature(parsed) {
     );
   }
 
-  const crypto = require("node:crypto");
-  const hmac = crypto.createHmac("sha256", secret);
+  const hmac = createHmac("sha256", secret);
   
   // We expect the signature to be over the canonical JSON of the payload minus the signature itself
   const canonicalBody = JSON.stringify(rest);
