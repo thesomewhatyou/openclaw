@@ -1193,6 +1193,7 @@ export async function runReplyAgent(params: {
     storePath,
     defaultModel,
     agentCfgContextTokens,
+    toolProgressDetail,
   });
 
   if (activeRunQueueAction === "drop") {
@@ -1401,6 +1402,7 @@ export async function runReplyAgent(params: {
       storePath,
       defaultModel,
       agentCfgContextTokens,
+      toolProgressDetail,
     });
 
     let responseUsageLine: string | undefined;

@@ -411,7 +411,11 @@ function convertAnthropicMessages(
         if (reasoningContent.length > 0) {
           assistantMsg.reasoning_content = reasoningContent.join("\n");
         } else if (allowReasoningContentReplay) {
-          assistantMsg.reasoning_content = "";
+          blocks.unshift({
+            type: "thinking",
+            thinking: "",
+            signature: "reasoning_content",
+          });
         }
         params.push(assistantMsg);
       }
@@ -788,8 +792,7 @@ function buildAnthropicParams(
     model: model.id,
     messages: ensureNonEmptyAnthropicMessages(
       convertAnthropicMessages(context.messages, model, isOAuthToken, {
-        allowReasoningContentReplay:
-          supportsReasoningContentReplay(model) && options?.thinkingEnabled === true,
+        allowReasoningContentReplay: supportsReasoningContentReplay(model),
       }),
     ),
     max_tokens: maxTokens,
@@ -946,8 +949,7 @@ export function createAnthropicMessagesTransportStreamFn(): StreamFn {
         );
         stream.push({ type: "start", partial: output as never });
         const blocks = output.content;
-        const allowReasoningContentReplay =
-          supportsReasoningContentReplay(model) && transportOptions.thinkingEnabled === true;
+        const allowReasoningContentReplay = supportsReasoningContentReplay(model);
         const reasoningContentThinkingBlocks = new Map<number, number>();
         const reasoningContentTextBlocks = new Map<number, number>();
         const eventIndexKey = (eventIndex: unknown) =>
@@ -1193,8 +1195,7 @@ export function createAnthropicMessagesTransportStreamFn(): StreamFn {
               const hasNativeAnthropicDelta =
                 (delta?.type === "text_delta" && typeof delta.text === "string") ||
                 (delta?.type === "thinking_delta" && typeof delta.thinking === "string") ||
-                (delta?.type === "input_json_delta" &&
-                  typeof delta.partial_json === "string") ||
+                (delta?.type === "input_json_delta" && typeof delta.partial_json === "string") ||
                 (delta?.type === "signature_delta" && typeof delta.signature === "string");
               let appendedContent = false;
               if (

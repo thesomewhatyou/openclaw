@@ -79,6 +79,8 @@ export type AgentConfig = {
   id: string;
   default?: boolean;
   name?: string;
+  /** Optional human-authored agent description. */
+  description?: string;
   workspace?: string;
   agentDir?: string;
   /** Optional per-agent full system prompt replacement. */
@@ -108,6 +110,8 @@ export type AgentConfig = {
   bootstrapMaxChars?: AgentDefaultsConfig["bootstrapMaxChars"];
   /** Optional per-agent max total chars across injected bootstrap files. */
   bootstrapTotalMaxChars?: AgentDefaultsConfig["bootstrapTotalMaxChars"];
+  /** Optional per-agent experimental flags. Omitted fields inherit agents.defaults.experimental. */
+  experimental?: AgentDefaultsConfig["experimental"];
   /** Optional allowlist of skills for this agent; omitting it inherits agents.defaults.skills when set, and an explicit list replaces defaults instead of merging. */
   skills?: string[];
   memorySearch?: MemorySearchConfig;

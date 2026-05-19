@@ -186,7 +186,7 @@ describe("runGatewayUpdate", () => {
       argv: string[],
       options?: { env?: NodeJS.ProcessEnv; cwd?: string; timeoutMs?: number },
     ) => {
-      const key = argv.join(" ");
+      const key = normalizeNpmFreshnessArgs(argv).join(" ");
       calls.push(key);
       const override = await params.onCommand?.(key, options);
       if (override) {
@@ -212,6 +212,7 @@ describe("runGatewayUpdate", () => {
       tag?: string;
       cwd?: string;
       devTargetRef?: string;
+      deferConfiguredPluginInstallRepair?: boolean;
     },
   ) {
     return runGatewayUpdate({
@@ -221,6 +222,9 @@ describe("runGatewayUpdate", () => {
       ...(options?.channel ? { channel: options.channel } : {}),
       ...(options?.tag ? { tag: options.tag } : {}),
       ...(options?.devTargetRef ? { devTargetRef: options.devTargetRef } : {}),
+      ...(options?.deferConfiguredPluginInstallRepair
+        ? { deferConfiguredPluginInstallRepair: true }
+        : {}),
     });
   }
 
@@ -231,6 +235,7 @@ describe("runGatewayUpdate", () => {
       tag?: string;
       cwd?: string;
       devTargetRef?: string;
+      deferConfiguredPluginInstallRepair?: boolean;
     },
   ) {
     return runWithCommand(runner, options);
@@ -281,6 +286,10 @@ describe("runGatewayUpdate", () => {
     return { nodeModules, pkgRoot };
   }
 
+  const npmFreshnessArg = "--min-release-age=0";
+  const normalizeNpmFreshnessArgs = (argv: string[]) =>
+    argv.map((arg) => (/^--before=\d{4}-\d{2}-\d{2}T/u.test(arg) ? npmFreshnessArg : arg));
+
   const npmGlobalInstallCommand = (spec: string, extraArgs: string[] = []) =>
     [
       "npm",
@@ -291,7 +300,7 @@ describe("runGatewayUpdate", () => {
       "--no-fund",
       "--no-audit",
       "--loglevel=error",
-      "--min-release-age=0",
+      npmFreshnessArg,
     ].join(" ");
 
   function createGlobalNpmUpdateRunner(params: {
@@ -304,7 +313,7 @@ describe("runGatewayUpdate", () => {
     const omitOptionalInstallKey = npmGlobalInstallCommand("openclaw@latest", ["--omit=optional"]);
 
     return async (argv: string[]): Promise<CommandResult> => {
-      const key = argv.join(" ");
+      const key = normalizeNpmFreshnessArgs(argv).join(" ");
       if (key === `git -C ${params.pkgRoot} rev-parse --show-toplevel`) {
         return { stdout: "", stderr: "not a git repository", code: 128 };
       }
@@ -427,6 +436,38 @@ describe("runGatewayUpdate", () => {
       npm_config_resolution_mode: "highest",
       pnpm_config_resolution_mode: "highest",
     });
+  });
+
+  it("marks git update doctor passes for configured-plugin repair deferral when requested", async () => {
+    await setupGitCheckout({ packageManager: "pnpm@8.0.0" });
+    await setupUiIndex();
+    const stableTag = "v1.0.1-1";
+    let doctorEnv: NodeJS.ProcessEnv | undefined;
+    const doctorNodePath = await resolveStableNodePath(process.execPath);
+    const doctorCommand = `${doctorNodePath} ${path.join(tempDir, "openclaw.mjs")} doctor --non-interactive --fix`;
+    const { runCommand } = createGitInstallRunner({
+      stableTag,
+      installCommand: "pnpm install",
+      buildCommand: "pnpm build",
+      uiBuildCommand: "pnpm ui:build",
+      doctorCommand,
+      onCommand: (key, options) => {
+        if (key === doctorCommand) {
+          doctorEnv = options?.env;
+        }
+        return undefined;
+      },
+    });
+
+    const result = await runWithCommand(runCommand, {
+      channel: "stable",
+      deferConfiguredPluginInstallRepair: true,
+    });
+
+    expect(result.status).toBe("ok");
+    expect(doctorEnv?.OPENCLAW_UPDATE_IN_PROGRESS).toBe("1");
+    expect(doctorEnv?.OPENCLAW_UPDATE_DEFER_CONFIGURED_PLUGIN_INSTALL_REPAIR).toBe("1");
+    expect(doctorEnv?.OPENCLAW_UPDATE_PARENT_SUPPORTS_DOCTOR_CONFIG_WRITE).toBe("1");
   });
 
   it("uses pnpm highest resolution mode for dev preflight installs", async () => {
@@ -1623,7 +1664,7 @@ describe("runGatewayUpdate", () => {
   }) => {
     const calls: string[] = [];
     const runCommand = async (argv: string[], options?: { env?: NodeJS.ProcessEnv }) => {
-      const key = argv.join(" ");
+      const key = normalizeNpmFreshnessArgs(argv).join(" ");
       calls.push(key);
       if (key === `git -C ${params.pkgRoot} rev-parse --show-toplevel`) {
         if (params.gitRootMode === "missing") {
@@ -1650,10 +1691,10 @@ describe("runGatewayUpdate", () => {
       const prefixIndex = argv.indexOf("--prefix");
       const installPrefix = prefixIndex >= 0 ? argv[prefixIndex + 1] : undefined;
       if (installPrefix) {
-        const normalizedInstallCommand = [
+        const normalizedInstallCommand = normalizeNpmFreshnessArgs([
           ...argv.slice(0, prefixIndex),
           ...argv.slice(prefixIndex + 2),
-        ].join(" ");
+        ]).join(" ");
         if (normalizedInstallCommand === params.installCommand) {
           const packageRoot =
             process.platform === "win32"

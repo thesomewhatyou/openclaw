@@ -15,6 +15,7 @@ import {
 } from "../../tasks/detached-task-runtime.js";
 import { clearCronJobActive, markCronJobActive } from "../active-jobs.js";
 import { resolveCronDeliveryPlan, resolveFailureDestination } from "../delivery-plan.js";
+import { resolveCronAgentSessionKey } from "../isolated-agent/session-key.js";
 import {
   createCronRunDiagnosticsFromError,
   normalizeCronRunDiagnostics,
@@ -124,6 +125,7 @@ const CRON_AGENT_PHASE_WATCHDOG_STAGE = {
   runner_entered: "pre_execution",
   workspace: "pre_execution",
   runtime_plugins: "pre_execution",
+  before_agent_reply: "execution",
   model_resolution: "pre_execution",
   auth: "pre_execution",
   context_engine: "pre_execution",
@@ -263,8 +265,19 @@ function createCronAgentWatchdog(params: {
     if (!info) {
       return;
     }
+    const previousPhase = activeExecution?.phase;
     activeExecution = { ...activeExecution, ...info };
-    if (isCronAgentExecutionStarted(info)) {
+    const stage = info.phase ? CRON_AGENT_PHASE_WATCHDOG_STAGE[info.phase] : undefined;
+    if (
+      state === "executing" &&
+      previousPhase === "before_agent_reply" &&
+      stage === "pre_execution"
+    ) {
+      state = "waiting_for_execution";
+      startPreExecutionTimeout();
+      return;
+    }
+    if (stage === "execution" || info.firstModelCallStarted) {
       state = "executing";
       clearPreExecutionTimeout();
     }
@@ -375,13 +388,6 @@ function formatCronAgentExecutionPhase(execution?: CronAgentExecutionStarted): s
   return formatEmbeddedAgentExecutionPhase(execution?.phase);
 }
 
-function isCronAgentExecutionStarted(info: CronAgentExecutionStarted): boolean {
-  if (info.firstModelCallStarted) {
-    return true;
-  }
-  return info.phase ? CRON_AGENT_PHASE_WATCHDOG_STAGE[info.phase] === "execution" : false;
-}
-
 function resolveCronAgentPreExecutionWatchdogMs(jobTimeoutMs: number): number {
   return Math.max(
     CRON_AGENT_PRE_EXECUTION_MIN_WATCHDOG_MS,
@@ -414,6 +420,23 @@ export function normalizeCronRunErrorText(err: unknown): string {
   return String(err);
 }
 
+function resolveCronTaskChildSessionKey(params: {
+  state: CronServiceState;
+  job: CronJob;
+}): string | undefined {
+  const explicitSessionKey = params.job.sessionKey?.trim();
+  if (explicitSessionKey) {
+    return explicitSessionKey;
+  }
+  if (params.job.sessionTarget !== "isolated") {
+    return undefined;
+  }
+  return resolveCronAgentSessionKey({
+    sessionKey: `cron:${params.job.id}`,
+    agentId: params.job.agentId ?? params.state.deps.defaultAgentId ?? DEFAULT_AGENT_ID,
+  });
+}
+
 function tryCreateCronTaskRun(params: {
   state: CronServiceState;
   job: CronJob;
@@ -426,7 +449,7 @@ function tryCreateCronTaskRun(params: {
       sourceId: params.job.id,
       ownerKey: "",
       scopeKind: "system",
-      childSessionKey: params.job.sessionKey,
+      childSessionKey: resolveCronTaskChildSessionKey(params),
       agentId: params.job.agentId,
       runId,
       label: params.job.name,
