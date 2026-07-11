@@ -1754,11 +1754,6 @@
       "translated": "Sessões"
     },
     {
-      "id": "native.android.2806eb5b11becd89",
-      "source": "Reverse session sort",
-      "translated": "Inverter ordenação de sessões"
-    },
-    {
       "id": "native.android.e0f10db479f627eb",
       "source": "Recent",
       "translated": "Recentes"
@@ -1779,14 +1774,14 @@
       "translated": "Pesquisar sessões"
     },
     {
-      "id": "native.android.9d0765fc76c3fca5",
-      "source": "Newest",
-      "translated": "Mais recentes"
+      "id": "native.android.dc52c5f9d7b85ec8",
+      "source": "Newest first",
+      "translated": "Mais recentes primeiro"
     },
     {
-      "id": "native.android.7f0fea03a2e789d3",
-      "source": "Oldest",
-      "translated": "Mais antigas"
+      "id": "native.android.78b9d0ab41446a1b",
+      "source": "Oldest first",
+      "translated": "Mais antigos primeiro"
     },
     {
       "id": "native.android.c6bf8751e2a7f5c7",
@@ -3649,6 +3644,11 @@
       "translated": "Você"
     },
     {
+      "id": "native.android.10d8391dea9f334b",
+      "source": "📎 ${attachment.fileName}",
+      "translated": "📎 ${attachment.fileName}"
+    },
+    {
       "id": "native.android.9bd31c23ebdf7c7a",
       "source": "Retry",
       "translated": "Tentar novamente"
@@ -3802,6 +3802,16 @@
       "id": "native.android.8e3e367df24cae4b",
       "source": "Gateway offline",
       "translated": "Gateway offline"
+    },
+    {
+      "id": "native.android.36ed01582459bc10",
+      "source": "Close thinking level selector",
+      "translated": "Fechar seletor de nível de raciocínio"
+    },
+    {
+      "id": "native.android.82d6389036a1e211",
+      "source": "Open thinking level selector",
+      "translated": "Abrir seletor de nível de raciocínio"
     },
     {
       "id": "native.android.623e434c83e3c020",
@@ -9329,11 +9339,6 @@
       "translated": "Negar"
     },
     {
-      "id": "native.apple.6fdc607c6178ba31",
-      "source": "OpenClaw on GitHub",
-      "translated": "OpenClaw no GitHub"
-    },
-    {
       "id": "native.apple.5ac0c79487a492b4",
       "source": "OpenClaw",
       "translated": "OpenClaw"
@@ -9447,6 +9452,71 @@
       "id": "native.apple.69b64bb81b900cc4",
       "source": "\\(user)@\\(host):\\(port)",
       "translated": "\\(user)@\\(host):\\(port)"
+    },
+    {
+      "id": "native.apple.f21ae54762766350",
+      "source": "Browser import requires Local mode",
+      "translated": "A importação do navegador requer o modo Local"
+    },
+    {
+      "id": "native.apple.9c5afae0c9a2c3dc",
+      "source": "Switch this Mac app to a local Gateway before importing browser cookies.",
+      "translated": "Alterne este app do Mac para um Gateway local antes de importar cookies do navegador."
+    },
+    {
+      "id": "native.apple.1d0cf21afa658361",
+      "source": "No Chrome, Brave, Edge, or Chromium profile with cookies was found on this Mac.",
+      "translated": "Nenhum perfil do Chrome, Brave, Edge ou Chromium com cookies foi encontrado neste Mac."
+    },
+    {
+      "id": "native.apple.bf12914ddc56e2c0",
+      "source": "System browser profile import is disabled in the local Gateway configuration.",
+      "translated": "A importação de perfil do navegador do sistema está desativada na configuração do Gateway local."
+    },
+    {
+      "id": "native.apple.592461b1fb69f91f",
+      "source": "No browser login available",
+      "translated": "Nenhum login de navegador disponível"
+    },
+    {
+      "id": "native.apple.3af5e5fbc2449e11",
+      "source": "Browser import unavailable",
+      "translated": "Importação do navegador indisponível"
+    },
+    {
+      "id": "native.apple.d3dddd5b7efc8543",
+      "source": "Browser login imported",
+      "translated": "Login do navegador importado"
+    },
+    {
+      "id": "native.apple.11c315582dc3388a",
+      "source": "Browser import failed",
+      "translated": "Falha na importação do navegador"
+    },
+    {
+      "id": "native.apple.b9da2c873ad24b0f",
+      "source": "CLI install failed",
+      "translated": "Falha na instalação da CLI"
+    },
+    {
+      "id": "native.apple.506cd570a8f8a80d",
+      "source": "CLI install finished",
+      "translated": "Instalação da CLI concluída"
+    },
+    {
+      "id": "native.apple.a952bff9aa7c7e9b",
+      "source": "Stable",
+      "translated": "Estável"
+    },
+    {
+      "id": "native.apple.a80cbef551294895",
+      "source": "Beta",
+      "translated": "Beta"
+    },
+    {
+      "id": "native.apple.dac0bc4221a6e965",
+      "source": "Dev (Git main)",
+      "translated": "Dev (Git main)"
     },
     {
       "id": "native.apple.cfc2509b8bbcf1d7",
@@ -10704,6 +10774,16 @@
       "translated": "Somente padrões de caminho. Inclua '/', '~' ou '\\\\'."
     },
     {
+      "id": "native.apple.5b9878c76d9a0995",
+      "source": "This allowlist entry is inherited. Edit its owning scope and retry.",
+      "translated": "Esta entrada da lista de permissões é herdada. Edite o escopo proprietário e tente novamente."
+    },
+    {
+      "id": "native.apple.511333a8588db7e2",
+      "source": "Could not save exec approvals. Last known settings are shown; retry the change.",
+      "translated": "Não foi possível salvar as aprovações de execução. As últimas configurações conhecidas são exibidas; tente a alteração novamente."
+    },
+    {
       "id": "native.apple.db0fa6b60bd859f8",
       "source": ":\\(endpoint.port)",
       "translated": ":\\(endpoint.port)"
@@ -10837,6 +10917,26 @@
       "id": "native.apple.82e287000e34b51e",
       "source": "Allow signed tools (e.g. `peekaboo`) to drive UI automation via PeekabooBridge.",
       "translated": "Permitir que ferramentas assinadas (por exemplo, `peekaboo`) controlem a automação da UI via PeekabooBridge."
+    },
+    {
+      "id": "native.apple.72b24ed86295d6fa",
+      "source": "Browser",
+      "translated": "Navegador"
+    },
+    {
+      "id": "native.apple.439535b659ad69df",
+      "source": "Browser login",
+      "translated": "Login do navegador"
+    },
+    {
+      "id": "native.apple.de4f3832100c9a23",
+      "source": "Copy cookies from a Chrome-family profile into an isolated managed profile.",
+      "translated": "Copie cookies de um perfil da família Chrome para um perfil gerenciado isolado."
+    },
+    {
+      "id": "native.apple.89dab98753cdc0c2",
+      "source": "Import…",
+      "translated": "Importar…"
     },
     {
       "id": "native.apple.476c2358c26250a7",
@@ -11354,6 +11454,16 @@
       "translated": "Configurações..."
     },
     {
+      "id": "native.apple.f6048387f9b99c8e",
+      "source": "Back",
+      "translated": "Voltar"
+    },
+    {
+      "id": "native.apple.c19b0989064c0020",
+      "source": "Forward",
+      "translated": "Avançar"
+    },
+    {
       "id": "native.apple.fae2cf18519da0d5",
       "source": "OpenClaw",
       "translated": "OpenClaw"
@@ -11407,6 +11517,16 @@
       "id": "native.apple.a7298f07a717f564",
       "source": "Exec Approvals",
       "translated": "Aprovações de execução"
+    },
+    {
+      "id": "native.apple.348d4adeb2afab25",
+      "source": "Loading Exec Approvals…",
+      "translated": "Carregando Aprovações de Execução…"
+    },
+    {
+      "id": "native.apple.b2f5f038c81a4a89",
+      "source": "Retry Exec Approvals",
+      "translated": "Tentar Aprovações de Execução novamente"
     },
     {
       "id": "native.apple.fa9ee90b4a391979",
@@ -11704,6 +11824,16 @@
       "translated": "Uso"
     },
     {
+      "id": "native.apple.386595fa18585dbb",
+      "source": "approvalSource requires matching systemRunPlan",
+      "translated": "approvalSource requer systemRunPlan correspondente"
+    },
+    {
+      "id": "native.apple.014ff905cecd753b",
+      "source": "explicit approval requires matching systemRunPlan",
+      "translated": "aprovação explícita requer systemRunPlan correspondente"
+    },
+    {
       "id": "native.apple.7eb0a88b8274ced8",
       "source": "Node pairing approved",
       "translated": "Pareamento do nó aprovado"
@@ -11729,137 +11859,177 @@
       "translated": "Avançar"
     },
     {
-      "id": "native.apple.0a6a895baa7f708e",
+      "id": "native.apple.9a186b012ec473a1",
+      "source": "The Gateway setup request failed.",
+      "translated": "A solicitação de configuração do Gateway falhou."
+    },
+    {
+      "id": "native.apple.52ad972e0b9498fa",
+      "source": "The Gateway setup request failed. Show details to inspect or copy the error.",
+      "translated": "A solicitação de configuração do Gateway falhou. Mostre os detalhes para inspecionar ou copiar o erro."
+    },
+    {
+      "id": "native.apple.9644b964d7adea91",
+      "source": "\\(label) couldn’t complete the test.",
+      "translated": "\\(label) não conseguiu concluir o teste."
+    },
+    {
+      "id": "native.apple.f9c76663d90cff5c",
+      "source": "\\(label) couldn’t complete the test. Show details to inspect or copy the error.",
+      "translated": "\\(label) não conseguiu concluir o teste. Mostre os detalhes para inspecionar ou copiar o erro."
+    },
+    {
+      "id": "native.apple.f3f900bed1ccf58b",
       "source": "Looking for AI you already use…",
       "translated": "Procurando IA que você já usa…"
     },
     {
-      "id": "native.apple.9d19cb7eb5fa6d79",
+      "id": "native.apple.87f0d2248ff12e38",
+      "source": "Waiting for the previous AI test to finish…",
+      "translated": "Aguardando o teste de IA anterior terminar…"
+    },
+    {
+      "id": "native.apple.c7a02803addf11fa",
       "source": "Checking for Claude Code, Codex, Gemini, and saved API keys.",
       "translated": "Verificando Claude Code, Codex, Gemini e chaves de API salvas."
     },
     {
-      "id": "native.apple.7e1e827f427bc317",
-      "source": "Couldn’t check this Mac for AI accounts",
-      "translated": "Não foi possível verificar este Mac em busca de contas de IA"
+      "id": "native.apple.e3e27d22fd2312a2",
+      "source": "OpenClaw will check again before changing any inference settings.",
+      "translated": "O OpenClaw verificará novamente antes de alterar quaisquer configurações de inferência."
     },
     {
-      "id": "native.apple.3b56fbfb9200f050",
+      "id": "native.apple.0fd3e5267cdf8250",
+      "source": "Couldn’t check this Gateway for AI accounts",
+      "translated": "Não foi possível verificar contas de IA neste Gateway"
+    },
+    {
+      "id": "native.apple.0af61b95d249c351",
+      "source": "Couldn’t check this Mac for AI accounts",
+      "translated": "Não foi possível verificar contas de IA neste Mac"
+    },
+    {
+      "id": "native.apple.ab05bb1569f89077",
       "source": "Couldn’t load the full provider list",
       "translated": "Não foi possível carregar a lista completa de provedores"
     },
     {
-      "id": "native.apple.87a3b9052eedd7eb",
+      "id": "native.apple.e8c5cb9022586a87",
       "source": "Try again",
       "translated": "Tentar novamente"
     },
     {
-      "id": "native.apple.3a585b31d77507d8",
+      "id": "native.apple.d281e0ae214cc599",
       "source": "None of the found options worked",
       "translated": "Nenhuma das opções encontradas funcionou"
     },
     {
-      "id": "native.apple.9947fd4c5e97875f",
+      "id": "native.apple.51a8291ef11e844d",
       "source": "The details are listed on each option above. You can fix the login and retry, or connect with an API key or token below.",
-      "translated": "Os detalhes estão listados em cada opção acima. Você pode corrigir o login e tentar novamente, ou conectar com uma chave de API ou token abaixo."
+      "translated": "Os detalhes estão listados em cada opção acima. Você pode corrigir o login e tentar novamente, ou conectar-se com uma chave de API ou token abaixo."
     },
     {
-      "id": "native.apple.dc51d7deab7b6c1e",
+      "id": "native.apple.11383227f922aaec",
       "source": "Need help? Chat with Crestodian",
       "translated": "Precisa de ajuda? Converse com o Crestodian"
     },
     {
-      "id": "native.apple.6bf2e2bdd950a97d",
+      "id": "native.apple.6526ced182e1fe50",
       "source": "Your AI is ready",
       "translated": "Sua IA está pronta"
     },
     {
-      "id": "native.apple.c3ed46eded513a65",
+      "id": "native.apple.5d8998398be53d6f",
+      "source": "Setup details",
+      "translated": "Detalhes da configuração"
+    },
+    {
+      "id": "native.apple.1967fcaeb9e74257",
+      "source": "Copy setup details",
+      "translated": "Copiar detalhes da configuração"
+    },
+    {
+      "id": "native.apple.f5a157404f7a0eff",
       "source": "No AI accounts found on this Mac",
       "translated": "Nenhuma conta de IA encontrada neste Mac"
     },
     {
-      "id": "native.apple.08d6423b6ed142a8",
+      "id": "native.apple.76072d0308a553ca",
       "source": "That’s fine — you can connect one with an API key or token. If you use Claude Code, Codex, or the Gemini CLI on this Mac, sign in there first and hit “Check again”.",
-      "translated": "Tudo bem — você pode conectar um com uma chave de API ou token. Se você usa o Claude Code, Codex ou o Gemini CLI neste Mac, faça login lá primeiro e clique em “Verificar novamente”."
+      "translated": "Tudo bem — você pode conectar uma com uma chave de API ou token. Se você usa o Claude Code, o Codex ou o Gemini CLI neste Mac, faça login lá primeiro e clique em “Verificar novamente”."
     },
     {
-      "id": "native.apple.f51a11c7f56bdb29",
-      "source": "Recommended",
-      "translated": "Recomendado"
-    },
-    {
-      "id": "native.apple.d13850075df8f0f3",
+      "id": "native.apple.5f28927fe23c11cb",
       "source": "No key-based providers are available",
       "translated": "Nenhum provedor baseado em chave está disponível"
     },
     {
-      "id": "native.apple.0dd754dd6da55727",
+      "id": "native.apple.aa4be25696c3f5fc",
       "source": "Enable or install a text-inference provider plugin on this Gateway, then check again.",
       "translated": "Ative ou instale um plugin de provedor de inferência de texto neste Gateway e verifique novamente."
     },
     {
-      "id": "native.apple.ff87d5ec9e15e581",
+      "id": "native.apple.89790664bd5e0758",
       "source": "Check again",
       "translated": "Verificar novamente"
     },
     {
-      "id": "native.apple.459cc3789bc7128d",
+      "id": "native.apple.f179b0447a18bbf4",
       "source": "Connect with an API key or token instead…",
-      "translated": "Conectar com uma chave de API ou token…"
+      "translated": "Conectar com uma chave de API ou token em vez disso…"
     },
     {
-      "id": "native.apple.8347a2f698a63735",
+      "id": "native.apple.c3e8449bcdd9b054",
       "source": "Connect with an API key or token",
       "translated": "Conectar com uma chave de API ou token"
     },
     {
-      "id": "native.apple.9da1d31635dca50b",
+      "id": "native.apple.a9c9e609d96ec001",
       "source": "Provider",
       "translated": "Provedor"
     },
     {
-      "id": "native.apple.cb3d8a8506943d3a",
+      "id": "native.apple.2fb28e8b6b9e3918",
       "source": "API key or token",
       "translated": "Chave de API ou token"
     },
     {
-      "id": "native.apple.41d117fdc784999f",
+      "id": "native.apple.6621d46d9ebfefa6",
       "source": "Connect",
       "translated": "Conectar"
     },
     {
-      "id": "native.apple.ce55144c35473419",
+      "id": "native.apple.953d477f3f3f2efa",
       "source": "That key didn’t work",
       "translated": "Essa chave não funcionou"
     },
     {
-      "id": "native.apple.95ba6710c48389ae",
+      "id": "native.apple.18c6f84a21b9d92f",
       "source": "Crestodian — setup helper",
       "translated": "Crestodian — assistente de configuração"
     },
     {
-      "id": "native.apple.06d9df11b5b462b4",
+      "id": "native.apple.bea852c8622c8214",
       "source": "Done",
       "translated": "Concluído"
     },
     {
-      "id": "native.apple.c3460290224a3ed3",
+      "id": "native.apple.f91347240d07008f",
       "source": "Open help…",
       "translated": "Abrir ajuda…"
     },
     {
-      "id": "native.apple.cd74ba4ea185d89e",
+      "id": "native.apple.1af12c60f9a7c364",
       "source": "Hide details",
       "translated": "Ocultar detalhes"
     },
     {
-      "id": "native.apple.3a8d0f37b25ab92d",
+      "id": "native.apple.5e7e4e9dbc9a3980",
       "source": "Show details",
       "translated": "Mostrar detalhes"
     },
     {
-      "id": "native.apple.bdf53a219bdfbe0d",
+      "id": "native.apple.65fe24f910ca50cb",
       "source": "Copy error",
       "translated": "Copiar erro"
     },
@@ -12209,71 +12379,6 @@
       "translated": "Tentar novamente"
     },
     {
-      "id": "native.apple.155fc8bc8b9f8c3f",
-      "source": "Agent workspace",
-      "translated": "Workspace do agente"
-    },
-    {
-      "id": "native.apple.d82e61ae0119bf7c",
-      "source": "OpenClaw runs the agent from a dedicated workspace so it can load `AGENTS.md` and write files there without mixing into your other projects.",
-      "translated": "O OpenClaw executa o agente a partir de um workspace dedicado para que ele possa carregar `AGENTS.md` e gravar arquivos lá sem se misturar aos seus outros projetos."
-    },
-    {
-      "id": "native.apple.5a32f8309c1faaee",
-      "source": "Remote gateway detected",
-      "translated": "Gateway remoto detectado"
-    },
-    {
-      "id": "native.apple.2156b2c0e9afe407",
-      "source": "Create the workspace on the remote host (SSH in first). The macOS app can’t write files on your gateway over SSH yet.",
-      "translated": "Crie o workspace no host remoto (acesse via SSH primeiro). O app para macOS ainda não consegue gravar arquivos no seu gateway por SSH."
-    },
-    {
-      "id": "native.apple.7285ab8a8c5a17a1",
-      "source": "Copied",
-      "translated": "Copiado"
-    },
-    {
-      "id": "native.apple.d006e5220689679b",
-      "source": "Copy setup command",
-      "translated": "Copiar comando de configuração"
-    },
-    {
-      "id": "native.apple.e707cf5fab72f1f3",
-      "source": "Workspace folder",
-      "translated": "Pasta do workspace"
-    },
-    {
-      "id": "native.apple.88d2a41a6763127a",
-      "source": "Create workspace",
-      "translated": "Criar workspace"
-    },
-    {
-      "id": "native.apple.3c9e2e010d0a878f",
-      "source": "Open folder",
-      "translated": "Abrir pasta"
-    },
-    {
-      "id": "native.apple.0172a11ddaa58a58",
-      "source": "Save in config",
-      "translated": "Salvar na configuração"
-    },
-    {
-      "id": "native.apple.fc612f22fe551226",
-      "source": "Tip: edit AGENTS.md in this folder to shape the assistant’s behavior. For backup, make the workspace a private git repo so your agent’s “memory” is versioned.",
-      "translated": "Dica: edite AGENTS.md nesta pasta para moldar o comportamento do assistente. Para backup, transforme o workspace em um repositório git privado para que a “memória” do seu agente seja versionada."
-    },
-    {
-      "id": "native.apple.803fffba25310a90",
-      "source": "Meet your agent",
-      "translated": "Conheça seu agente"
-    },
-    {
-      "id": "native.apple.6c35dc9becd6ca0f",
-      "source": "Your agent introduces itself, picks a name with you, and helps you connect WhatsApp, Telegram, or another channel — just chat.",
-      "translated": "Seu agente se apresenta, escolhe um nome com você e ajuda você a conectar WhatsApp, Telegram ou outro canal — é só conversar."
-    },
-    {
       "id": "native.apple.25e82538dc9e9aad",
       "source": "You’re all set!",
       "translated": "Tudo pronto!"
@@ -12402,6 +12507,16 @@
       "id": "native.apple.048e9cc88fb7af55",
       "source": "Not Now",
       "translated": "Agora Não"
+    },
+    {
+      "id": "native.apple.4f271aca6df52a32",
+      "source": "Reject All",
+      "translated": "Rejeitar tudo"
+    },
+    {
+      "id": "native.apple.bef7b0a91ca5c184",
+      "source": "Approve All",
+      "translated": "Aprovar tudo"
     },
     {
       "id": "native.apple.57e27a9a3ef63ac4",
@@ -13237,6 +13352,31 @@
       "id": "native.apple.e5198b803f0b5c9f",
       "source": "Control how agent shell commands are approved on this Mac.",
       "translated": "Controle como os comandos de shell do agente são aprovados neste Mac."
+    },
+    {
+      "id": "native.apple.4ec0e98876dd4130",
+      "source": "Loading settings…",
+      "translated": "Carregando configurações…"
+    },
+    {
+      "id": "native.apple.15112b7a64de6801",
+      "source": "Reading the persisted policy.",
+      "translated": "Lendo a política persistida."
+    },
+    {
+      "id": "native.apple.10ccbcb69920d863",
+      "source": "Exec Approvals Unavailable",
+      "translated": "Aprovações de Exec indisponíveis"
+    },
+    {
+      "id": "native.apple.f8de480303620970",
+      "source": "Settings could not be read",
+      "translated": "Não foi possível ler as configurações"
+    },
+    {
+      "id": "native.apple.761db018bc2fc118",
+      "source": "Retry",
+      "translated": "Tentar novamente"
     },
     {
       "id": "native.apple.4c894d7779471cda",
@@ -14507,6 +14647,11 @@
       "id": "native.apple.8d0606ab1a2c0f44",
       "source": "Gateway connected",
       "translated": "Gateway conectado"
+    },
+    {
+      "id": "native.apple.f74d150ce05205dd",
+      "source": "z",
+      "translated": "z"
     },
     {
       "id": "native.apple.71e0219d1501de06",

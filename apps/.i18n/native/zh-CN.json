@@ -1754,11 +1754,6 @@
       "translated": "会话"
     },
     {
-      "id": "native.android.2806eb5b11becd89",
-      "source": "Reverse session sort",
-      "translated": "反转会话排序"
-    },
-    {
       "id": "native.android.e0f10db479f627eb",
       "source": "Recent",
       "translated": "最近"
@@ -1779,14 +1774,14 @@
       "translated": "搜索会话"
     },
     {
-      "id": "native.android.9d0765fc76c3fca5",
-      "source": "Newest",
-      "translated": "最新"
+      "id": "native.android.dc52c5f9d7b85ec8",
+      "source": "Newest first",
+      "translated": "最新在前"
     },
     {
-      "id": "native.android.7f0fea03a2e789d3",
-      "source": "Oldest",
-      "translated": "最早"
+      "id": "native.android.78b9d0ab41446a1b",
+      "source": "Oldest first",
+      "translated": "最早在前"
     },
     {
       "id": "native.android.c6bf8751e2a7f5c7",
@@ -3649,6 +3644,11 @@
       "translated": "你"
     },
     {
+      "id": "native.android.10d8391dea9f334b",
+      "source": "📎 ${attachment.fileName}",
+      "translated": "📎 ${attachment.fileName}"
+    },
+    {
       "id": "native.android.9bd31c23ebdf7c7a",
       "source": "Retry",
       "translated": "重试"
@@ -3802,6 +3802,16 @@
       "id": "native.android.8e3e367df24cae4b",
       "source": "Gateway offline",
       "translated": "Gateway 离线"
+    },
+    {
+      "id": "native.android.36ed01582459bc10",
+      "source": "Close thinking level selector",
+      "translated": "关闭思考级别选择器"
+    },
+    {
+      "id": "native.android.82d6389036a1e211",
+      "source": "Open thinking level selector",
+      "translated": "打开思考级别选择器"
     },
     {
       "id": "native.android.623e434c83e3c020",
@@ -9329,11 +9339,6 @@
       "translated": "拒绝"
     },
     {
-      "id": "native.apple.6fdc607c6178ba31",
-      "source": "OpenClaw on GitHub",
-      "translated": "GitHub 上的 OpenClaw"
-    },
-    {
       "id": "native.apple.5ac0c79487a492b4",
       "source": "OpenClaw",
       "translated": "OpenClaw"
@@ -9447,6 +9452,71 @@
       "id": "native.apple.69b64bb81b900cc4",
       "source": "\\(user)@\\(host):\\(port)",
       "translated": "\\(user)@\\(host):\\(port)"
+    },
+    {
+      "id": "native.apple.f21ae54762766350",
+      "source": "Browser import requires Local mode",
+      "translated": "浏览器导入需要本地模式"
+    },
+    {
+      "id": "native.apple.9c5afae0c9a2c3dc",
+      "source": "Switch this Mac app to a local Gateway before importing browser cookies.",
+      "translated": "在导入浏览器 cookie 之前，请将此 Mac 应用切换到本地 Gateway。"
+    },
+    {
+      "id": "native.apple.1d0cf21afa658361",
+      "source": "No Chrome, Brave, Edge, or Chromium profile with cookies was found on this Mac.",
+      "translated": "在此 Mac 上未找到包含 cookie 的 Chrome、Brave、Edge 或 Chromium 配置文件。"
+    },
+    {
+      "id": "native.apple.bf12914ddc56e2c0",
+      "source": "System browser profile import is disabled in the local Gateway configuration.",
+      "translated": "本地 Gateway 配置中已禁用系统浏览器配置文件导入。"
+    },
+    {
+      "id": "native.apple.592461b1fb69f91f",
+      "source": "No browser login available",
+      "translated": "无可用的浏览器登录"
+    },
+    {
+      "id": "native.apple.3af5e5fbc2449e11",
+      "source": "Browser import unavailable",
+      "translated": "浏览器导入不可用"
+    },
+    {
+      "id": "native.apple.d3dddd5b7efc8543",
+      "source": "Browser login imported",
+      "translated": "已导入浏览器登录"
+    },
+    {
+      "id": "native.apple.11c315582dc3388a",
+      "source": "Browser import failed",
+      "translated": "浏览器导入失败"
+    },
+    {
+      "id": "native.apple.b9da2c873ad24b0f",
+      "source": "CLI install failed",
+      "translated": "CLI 安装失败"
+    },
+    {
+      "id": "native.apple.506cd570a8f8a80d",
+      "source": "CLI install finished",
+      "translated": "CLI 安装完成"
+    },
+    {
+      "id": "native.apple.a952bff9aa7c7e9b",
+      "source": "Stable",
+      "translated": "稳定版"
+    },
+    {
+      "id": "native.apple.a80cbef551294895",
+      "source": "Beta",
+      "translated": "测试版"
+    },
+    {
+      "id": "native.apple.dac0bc4221a6e965",
+      "source": "Dev (Git main)",
+      "translated": "开发版（Git main）"
     },
     {
       "id": "native.apple.cfc2509b8bbcf1d7",
@@ -10704,6 +10774,16 @@
       "translated": "仅限路径模式。请包含“/”、“~”或“\\\\”。"
     },
     {
+      "id": "native.apple.5b9878c76d9a0995",
+      "source": "This allowlist entry is inherited. Edit its owning scope and retry.",
+      "translated": "此允许列表条目为继承而来。请编辑其所属作用域后重试。"
+    },
+    {
+      "id": "native.apple.511333a8588db7e2",
+      "source": "Could not save exec approvals. Last known settings are shown; retry the change.",
+      "translated": "无法保存执行审批。已显示最近已知的设置；请重试此更改。"
+    },
+    {
       "id": "native.apple.db0fa6b60bd859f8",
       "source": ":\\(endpoint.port)",
       "translated": ":\\(endpoint.port)"
@@ -10837,6 +10917,26 @@
       "id": "native.apple.82e287000e34b51e",
       "source": "Allow signed tools (e.g. `peekaboo`) to drive UI automation via PeekabooBridge.",
       "translated": "允许已签名工具（例如 `peekaboo`）通过 PeekabooBridge 驱动 UI 自动化。"
+    },
+    {
+      "id": "native.apple.72b24ed86295d6fa",
+      "source": "Browser",
+      "translated": "浏览器"
+    },
+    {
+      "id": "native.apple.439535b659ad69df",
+      "source": "Browser login",
+      "translated": "浏览器登录"
+    },
+    {
+      "id": "native.apple.de4f3832100c9a23",
+      "source": "Copy cookies from a Chrome-family profile into an isolated managed profile.",
+      "translated": "将 Chrome 系列配置文件中的 Cookie 复制到隔离的受管配置文件中。"
+    },
+    {
+      "id": "native.apple.89dab98753cdc0c2",
+      "source": "Import…",
+      "translated": "导入…"
     },
     {
       "id": "native.apple.476c2358c26250a7",
@@ -11354,6 +11454,16 @@
       "translated": "设置..."
     },
     {
+      "id": "native.apple.f6048387f9b99c8e",
+      "source": "Back",
+      "translated": "返回"
+    },
+    {
+      "id": "native.apple.c19b0989064c0020",
+      "source": "Forward",
+      "translated": "前进"
+    },
+    {
       "id": "native.apple.fae2cf18519da0d5",
       "source": "OpenClaw",
       "translated": "OpenClaw"
@@ -11407,6 +11517,16 @@
       "id": "native.apple.a7298f07a717f564",
       "source": "Exec Approvals",
       "translated": "执行审批"
+    },
+    {
+      "id": "native.apple.348d4adeb2afab25",
+      "source": "Loading Exec Approvals…",
+      "translated": "正在加载 Exec Approvals…"
+    },
+    {
+      "id": "native.apple.b2f5f038c81a4a89",
+      "source": "Retry Exec Approvals",
+      "translated": "重试 Exec Approvals"
     },
     {
       "id": "native.apple.fa9ee90b4a391979",
@@ -11704,6 +11824,16 @@
       "translated": "用量"
     },
     {
+      "id": "native.apple.386595fa18585dbb",
+      "source": "approvalSource requires matching systemRunPlan",
+      "translated": "approvalSource 需要匹配的 systemRunPlan"
+    },
+    {
+      "id": "native.apple.014ff905cecd753b",
+      "source": "explicit approval requires matching systemRunPlan",
+      "translated": "显式批准需要匹配的 systemRunPlan"
+    },
+    {
       "id": "native.apple.7eb0a88b8274ced8",
       "source": "Node pairing approved",
       "translated": "节点配对已批准"
@@ -11729,137 +11859,177 @@
       "translated": "下一步"
     },
     {
-      "id": "native.apple.0a6a895baa7f708e",
-      "source": "Looking for AI you already use…",
-      "translated": "正在查找你已在使用的 AI…"
+      "id": "native.apple.9a186b012ec473a1",
+      "source": "The Gateway setup request failed.",
+      "translated": "Gateway 设置请求失败。"
     },
     {
-      "id": "native.apple.9d19cb7eb5fa6d79",
+      "id": "native.apple.52ad972e0b9498fa",
+      "source": "The Gateway setup request failed. Show details to inspect or copy the error.",
+      "translated": "Gateway 设置请求失败。显示详细信息以检查或复制错误。"
+    },
+    {
+      "id": "native.apple.9644b964d7adea91",
+      "source": "\\(label) couldn’t complete the test.",
+      "translated": "\\(label) 无法完成测试。"
+    },
+    {
+      "id": "native.apple.f9c76663d90cff5c",
+      "source": "\\(label) couldn’t complete the test. Show details to inspect or copy the error.",
+      "translated": "\\(label) 无法完成测试。显示详细信息以检查或复制错误。"
+    },
+    {
+      "id": "native.apple.f3f900bed1ccf58b",
+      "source": "Looking for AI you already use…",
+      "translated": "正在查找您已在使用的 AI…"
+    },
+    {
+      "id": "native.apple.87f0d2248ff12e38",
+      "source": "Waiting for the previous AI test to finish…",
+      "translated": "正在等待上一个 AI 测试完成…"
+    },
+    {
+      "id": "native.apple.c7a02803addf11fa",
       "source": "Checking for Claude Code, Codex, Gemini, and saved API keys.",
       "translated": "正在检查 Claude Code、Codex、Gemini 和已保存的 API 密钥。"
     },
     {
-      "id": "native.apple.7e1e827f427bc317",
-      "source": "Couldn’t check this Mac for AI accounts",
-      "translated": "无法检查这台 Mac 上的 AI 账号"
+      "id": "native.apple.e3e27d22fd2312a2",
+      "source": "OpenClaw will check again before changing any inference settings.",
+      "translated": "OpenClaw 将在更改任何推理设置之前再次检查。"
     },
     {
-      "id": "native.apple.3b56fbfb9200f050",
+      "id": "native.apple.0fd3e5267cdf8250",
+      "source": "Couldn’t check this Gateway for AI accounts",
+      "translated": "无法在此 Gateway 上检查 AI 账户"
+    },
+    {
+      "id": "native.apple.0af61b95d249c351",
+      "source": "Couldn’t check this Mac for AI accounts",
+      "translated": "无法在此 Mac 上检查 AI 账户"
+    },
+    {
+      "id": "native.apple.ab05bb1569f89077",
       "source": "Couldn’t load the full provider list",
       "translated": "无法加载完整的提供商列表"
     },
     {
-      "id": "native.apple.87a3b9052eedd7eb",
+      "id": "native.apple.e8c5cb9022586a87",
       "source": "Try again",
       "translated": "重试"
     },
     {
-      "id": "native.apple.3a585b31d77507d8",
+      "id": "native.apple.d281e0ae214cc599",
       "source": "None of the found options worked",
-      "translated": "找到的选项都无法使用"
+      "translated": "找到的选项均无法使用"
     },
     {
-      "id": "native.apple.9947fd4c5e97875f",
+      "id": "native.apple.51a8291ef11e844d",
       "source": "The details are listed on each option above. You can fix the login and retry, or connect with an API key or token below.",
-      "translated": "详细信息已列在上方每个选项中。你可以修复登录并重试，或在下方使用 API 密钥或令牌连接。"
+      "translated": "详细信息列在上面每个选项中。您可以修复登录后重试，或使用下方的 API key 或 token 进行连接。"
     },
     {
-      "id": "native.apple.dc51d7deab7b6c1e",
+      "id": "native.apple.11383227f922aaec",
       "source": "Need help? Chat with Crestodian",
-      "translated": "需要帮助？与 Crestodian 聊聊"
+      "translated": "需要帮助？与 Crestodian 聊天"
     },
     {
-      "id": "native.apple.6bf2e2bdd950a97d",
+      "id": "native.apple.6526ced182e1fe50",
       "source": "Your AI is ready",
-      "translated": "你的 AI 已准备就绪"
+      "translated": "您的 AI 已就绪"
     },
     {
-      "id": "native.apple.c3ed46eded513a65",
+      "id": "native.apple.5d8998398be53d6f",
+      "source": "Setup details",
+      "translated": "设置详情"
+    },
+    {
+      "id": "native.apple.1967fcaeb9e74257",
+      "source": "Copy setup details",
+      "translated": "复制设置详情"
+    },
+    {
+      "id": "native.apple.f5a157404f7a0eff",
       "source": "No AI accounts found on this Mac",
-      "translated": "在这台 Mac 上未找到 AI 账号"
+      "translated": "此 Mac 上未找到 AI 账户"
     },
     {
-      "id": "native.apple.08d6423b6ed142a8",
+      "id": "native.apple.76072d0308a553ca",
       "source": "That’s fine — you can connect one with an API key or token. If you use Claude Code, Codex, or the Gemini CLI on this Mac, sign in there first and hit “Check again”.",
-      "translated": "没关系——你可以使用 API 密钥或令牌连接。如果你在这台 Mac 上使用 Claude Code、Codex 或 Gemini CLI，请先在那里登录，然后点击“再次检查”。"
+      "translated": "没关系——您可以使用 API key 或 token 连接一个。如果您在此 Mac 上使用 Claude Code、Codex 或 Gemini CLI，请先在那里登录，然后点击“再次检查”。"
     },
     {
-      "id": "native.apple.f51a11c7f56bdb29",
-      "source": "Recommended",
-      "translated": "推荐"
-    },
-    {
-      "id": "native.apple.d13850075df8f0f3",
+      "id": "native.apple.5f28927fe23c11cb",
       "source": "No key-based providers are available",
-      "translated": "没有可用的基于密钥的提供商"
+      "translated": "没有可用的基于 key 的提供商"
     },
     {
-      "id": "native.apple.0dd754dd6da55727",
+      "id": "native.apple.aa4be25696c3f5fc",
       "source": "Enable or install a text-inference provider plugin on this Gateway, then check again.",
       "translated": "请在此 Gateway 上启用或安装文本推理提供商插件，然后再次检查。"
     },
     {
-      "id": "native.apple.ff87d5ec9e15e581",
+      "id": "native.apple.89790664bd5e0758",
       "source": "Check again",
       "translated": "再次检查"
     },
     {
-      "id": "native.apple.459cc3789bc7128d",
+      "id": "native.apple.f179b0447a18bbf4",
       "source": "Connect with an API key or token instead…",
-      "translated": "改为使用 API 密钥或令牌连接…"
+      "translated": "改为使用 API key 或 token 连接…"
     },
     {
-      "id": "native.apple.8347a2f698a63735",
+      "id": "native.apple.c3e8449bcdd9b054",
       "source": "Connect with an API key or token",
-      "translated": "使用 API 密钥或令牌连接"
+      "translated": "使用 API key 或 token 连接"
     },
     {
-      "id": "native.apple.9da1d31635dca50b",
+      "id": "native.apple.a9c9e609d96ec001",
       "source": "Provider",
       "translated": "提供商"
     },
     {
-      "id": "native.apple.cb3d8a8506943d3a",
+      "id": "native.apple.2fb28e8b6b9e3918",
       "source": "API key or token",
-      "translated": "API 密钥或令牌"
+      "translated": "API key 或 token"
     },
     {
-      "id": "native.apple.41d117fdc784999f",
+      "id": "native.apple.6621d46d9ebfefa6",
       "source": "Connect",
       "translated": "连接"
     },
     {
-      "id": "native.apple.ce55144c35473419",
+      "id": "native.apple.953d477f3f3f2efa",
       "source": "That key didn’t work",
       "translated": "该 key 无法使用"
     },
     {
-      "id": "native.apple.95ba6710c48389ae",
+      "id": "native.apple.18c6f84a21b9d92f",
       "source": "Crestodian — setup helper",
       "translated": "Crestodian — 设置助手"
     },
     {
-      "id": "native.apple.06d9df11b5b462b4",
+      "id": "native.apple.bea852c8622c8214",
       "source": "Done",
       "translated": "完成"
     },
     {
-      "id": "native.apple.c3460290224a3ed3",
+      "id": "native.apple.f91347240d07008f",
       "source": "Open help…",
       "translated": "打开帮助…"
     },
     {
-      "id": "native.apple.cd74ba4ea185d89e",
+      "id": "native.apple.1af12c60f9a7c364",
       "source": "Hide details",
-      "translated": "隐藏详细信息"
+      "translated": "隐藏详情"
     },
     {
-      "id": "native.apple.3a8d0f37b25ab92d",
+      "id": "native.apple.5e7e4e9dbc9a3980",
       "source": "Show details",
-      "translated": "显示详细信息"
+      "translated": "显示详情"
     },
     {
-      "id": "native.apple.bdf53a219bdfbe0d",
+      "id": "native.apple.65fe24f910ca50cb",
       "source": "Copy error",
       "translated": "复制错误"
     },
@@ -12209,71 +12379,6 @@
       "translated": "重试"
     },
     {
-      "id": "native.apple.155fc8bc8b9f8c3f",
-      "source": "Agent workspace",
-      "translated": "Agent 工作区"
-    },
-    {
-      "id": "native.apple.d82e61ae0119bf7c",
-      "source": "OpenClaw runs the agent from a dedicated workspace so it can load `AGENTS.md` and write files there without mixing into your other projects.",
-      "translated": "OpenClaw 会从专用工作区运行 Agent，以便它可以加载 `AGENTS.md` 并在那里写入文件，而不会混入你的其他项目。"
-    },
-    {
-      "id": "native.apple.5a32f8309c1faaee",
-      "source": "Remote gateway detected",
-      "translated": "检测到远程 Gateway"
-    },
-    {
-      "id": "native.apple.2156b2c0e9afe407",
-      "source": "Create the workspace on the remote host (SSH in first). The macOS app can’t write files on your gateway over SSH yet.",
-      "translated": "请在远程主机上创建工作区（先通过 SSH 登录）。macOS App 目前还无法通过 SSH 在你的 Gateway 上写入文件。"
-    },
-    {
-      "id": "native.apple.7285ab8a8c5a17a1",
-      "source": "Copied",
-      "translated": "已复制"
-    },
-    {
-      "id": "native.apple.d006e5220689679b",
-      "source": "Copy setup command",
-      "translated": "复制设置命令"
-    },
-    {
-      "id": "native.apple.e707cf5fab72f1f3",
-      "source": "Workspace folder",
-      "translated": "工作区文件夹"
-    },
-    {
-      "id": "native.apple.88d2a41a6763127a",
-      "source": "Create workspace",
-      "translated": "创建工作区"
-    },
-    {
-      "id": "native.apple.3c9e2e010d0a878f",
-      "source": "Open folder",
-      "translated": "打开文件夹"
-    },
-    {
-      "id": "native.apple.0172a11ddaa58a58",
-      "source": "Save in config",
-      "translated": "保存到配置"
-    },
-    {
-      "id": "native.apple.fc612f22fe551226",
-      "source": "Tip: edit AGENTS.md in this folder to shape the assistant’s behavior. For backup, make the workspace a private git repo so your agent’s “memory” is versioned.",
-      "translated": "提示：编辑此文件夹中的 AGENTS.md 以调整助手的行为。为便于备份，请将工作区设为私有 git 仓库，以便对你的智能体“记忆”进行版本管理。"
-    },
-    {
-      "id": "native.apple.803fffba25310a90",
-      "source": "Meet your agent",
-      "translated": "认识你的智能体"
-    },
-    {
-      "id": "native.apple.6c35dc9becd6ca0f",
-      "source": "Your agent introduces itself, picks a name with you, and helps you connect WhatsApp, Telegram, or another channel — just chat.",
-      "translated": "你的 agent 会自我介绍，与你一起取名，并帮助你连接 WhatsApp、Telegram 或其他频道 — 只需聊天即可。"
-    },
-    {
       "id": "native.apple.25e82538dc9e9aad",
       "source": "You’re all set!",
       "translated": "你已全部设置完成！"
@@ -12402,6 +12507,16 @@
       "id": "native.apple.048e9cc88fb7af55",
       "source": "Not Now",
       "translated": "暂不"
+    },
+    {
+      "id": "native.apple.4f271aca6df52a32",
+      "source": "Reject All",
+      "translated": "全部拒绝"
+    },
+    {
+      "id": "native.apple.bef7b0a91ca5c184",
+      "source": "Approve All",
+      "translated": "全部批准"
     },
     {
       "id": "native.apple.57e27a9a3ef63ac4",
@@ -13237,6 +13352,31 @@
       "id": "native.apple.e5198b803f0b5c9f",
       "source": "Control how agent shell commands are approved on this Mac.",
       "translated": "控制此 Mac 上代理 shell 命令的审批方式。"
+    },
+    {
+      "id": "native.apple.4ec0e98876dd4130",
+      "source": "Loading settings…",
+      "translated": "正在加载设置…"
+    },
+    {
+      "id": "native.apple.15112b7a64de6801",
+      "source": "Reading the persisted policy.",
+      "translated": "正在读取已保存的策略。"
+    },
+    {
+      "id": "native.apple.10ccbcb69920d863",
+      "source": "Exec Approvals Unavailable",
+      "translated": "Exec 批准不可用"
+    },
+    {
+      "id": "native.apple.f8de480303620970",
+      "source": "Settings could not be read",
+      "translated": "无法读取设置"
+    },
+    {
+      "id": "native.apple.761db018bc2fc118",
+      "source": "Retry",
+      "translated": "重试"
     },
     {
       "id": "native.apple.4c894d7779471cda",
@@ -14507,6 +14647,11 @@
       "id": "native.apple.8d0606ab1a2c0f44",
       "source": "Gateway connected",
       "translated": "Gateway 已连接"
+    },
+    {
+      "id": "native.apple.f74d150ce05205dd",
+      "source": "z",
+      "translated": "z"
     },
     {
       "id": "native.apple.71e0219d1501de06",
